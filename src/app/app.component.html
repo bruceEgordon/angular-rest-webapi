@@ -1,0 +1,13 @@
+<h2>Products Page</h2>
+<ul>
+    <li *ngFor="let product of products; let i = index">{{product.Name}} 
+        <input type="button" (click)="deleteProduct(i)" value="Delete">&nbsp;
+        <input type="button" (click)="editProduct(i)" value="Edit"></li>
+</ul>
+<h2>New Product</h2>
+ID: <input type="number" [(ngModel)]="newproduct.Id"><br>
+Name: <input type="text" [(ngModel)]="newproduct.Name"><br>
+Price: <input type="number" [(ngModel)]="newproduct.Price"><br>
+Category: <input type="text" [(ngModel)]="newproduct.Category"><br>
+Description: <input type="text" [(ngModel)]="newproduct.Description"><br>
+<input type="button" value="Save Product" (click)="saveProduct()">
